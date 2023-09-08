@@ -1,0 +1,216 @@
+# sepal_length = np.array(iris[:, 0], dtype=float) #'sepal length (cm)'
+# sepal_length
+# sepal_length.dtype # dtype('float64')
+
+sepal_length = iris_array[:, 0].astype(float) #'sepal length (cm)'
+sepal_width = iris_array[:, 1].astype(float) #'sepal width (cm)'
+petal_length = iris_array[:, 2].astype(float) #'petal length (cm)'
+petal_width = iris_array[:, 3].astype(float) #'petal width (cm)'
+target = iris_array[:, 4].astype(object)
+
+# petal length vs. petal width
+sns.scatterplot(x=petal_length, y=petal_width, hue=target)
+plt.title('petal length vs. petal width')
+plt.xlabel('petal length')
+plt.ylabel('petal width')
+plt.legend(['setosa', 'versicolor', 'virginica'], loc='upper right')
+
+
+m1=1
+c1=0
+
+m2 = 2
+c2 = 2
+
+m3 = 2
+c3 = 1
+
+m4 = 1
+c4 = 2
+
+x=np.linspace(0,3,100)
+y1 = m1*x + c1
+y2 = m2*x + c2
+y3 = m3*x + c3
+y4 = m4*x + c4
+
+fig, ax = plt.subplots(2, 2,figsize=(10, 8))
+
+ax[0, 0].plot(x, y1)
+ax[0, 1].plot(x, y2)
+ax[1, 0].plot(x, y3)
+ax[1, 1].plot(x,y4)
+
+ax[0, 0].set_title("Line-1")
+ax[0, 1].set_title("Line-2")
+ax[1, 0].set_title("Line-3")
+ax[1, 1].set_title("Line-4")
+
+fig.suptitle('Various Straight Lines',fontweight ="bold")
+
+fig.tight_layout()
+plt.show()
+
+transit={'setosa':0, 'versicolor':1, 'virginica':2}
+# for species in target:
+#   print(transit[species])
+species_array = np.array([transit[species] for species in target])
+
+import itertools
+colors = itertools.cycle(["r", "b", "g"])
+
+m1=1
+c1=0
+
+m2 = 2
+c2 = 2
+
+m3 = 2
+c3 = 1
+
+m4 = 1
+c4 = 2
+
+x=np.linspace(0,3,100)
+y1 = m1*x + c1
+y2 = m2*x + c2
+y3 = m3*x + c3
+y4 = m4*x + c4
+
+fig, ax = plt.subplots(2, 2,figsize=(10, 8))
+
+ax[0, 0].scatter(x=sepal_length, y=sepal_width, color=next(colors))
+ax[0, 1].scatter(x=petal_length, y=petal_width, s=species_array, cmap='Set1')
+ax[1, 0].scatter(x=petal_length, y=petal_width, s=species_array, cmap='Set1')
+ax[1, 1].scatter(x=petal_length, y=petal_width, s=species_array, cmap='Set1')
+
+ax[0, 0].set_title("Line-1")
+ax[0, 1].set_title("Line-2")
+ax[1, 0].set_title("Line-3")
+ax[1, 1].set_title("Line-4")
+
+plt.suptitle('Various Straight Lines',fontsize=20)
+
+fig.tight_layout()
+plt.show()
+
+transit={'setosa':0, 'versicolor':1, 'virginica':2}
+# for species in target:
+#   print(transit[species])
+species_array = np.array([transit[species] for species in target])
+
+
+# # 輸入的數據點
+# x1 = range(0, 100)
+# y= list()
+# for x1 in x1:
+#   x2 = (weights[0]*x1 + weights[2])/(-weights[1])
+#   print(x2)
+#   y.append(x2)
+# print(y)
+
+# # y = [3, 5, 7, 9, 11]
+
+# # 使用 lineplot 函數繪製線條
+# # sns.set_style("whitegrid")
+# sns.lineplot(x=x1, y=y)
+
+# plt.show()
+
+# 畫圖
+# 定義X1和X2的範圍
+# x_min, x_max = 0, 10
+# y_min, y_max = 0, 10
+
+# # 建立X1和X2的數組
+# x1 = np.linspace(x_min, x_max, 10)
+# x2 = np.linspace(y_min, y_max, 10)
+
+# 定義線性方程式
+# def eq(x1, x2):
+#     return weights[0]*x1 + weights[1]*x2 + weights[2]
+
+# # 繪製線性方程式圖形
+# sns.set(style="whitegrid")
+# sns.lmplot(x='petal_length', y='petal_width', data=train, fit_reg=False, hue ='species_setosa')
+# sns.lineplot(x=x1, y=eq(x1,x2), color='red')
+# plt.xlabel('petal length (cm)')
+# plt.ylabel('petal width (cm)')
+# plt.title('Perceptron Learning Algorithm')
+# plt.show()
+
+
+
+# 定義X1和X2的範圍
+# x_min, x_max = -10, 10
+# y_min, y_max = -10, 10
+
+# # 建立X1和X2的數組
+# x1 = np.linspace(x_min, x_max, 100)
+# x2 = np.linspace(y_min, y_max, 100)
+
+# # 計算y
+# y = x1 + x2 + 1
+
+# # 繪製線性方程式圖形
+# sns.set(style="whitegrid")
+# sns.lineplot(x=x1, y=y - x1, color='red')
+# plt.xlabel('X1')
+# plt.ylabel('X2')
+# plt.title('Linear Equation: Y = X1 + X2 + 1')
+# plt.show()
+
+# import numpy as np
+# import matplotlib.pyplot as plt
+
+# # 定義X1和X2的範圍
+# x_min, x_max = -10, 10
+# y_min, y_max = -10, 10
+
+# # 建立X1和X2的數組
+# x1 = np.linspace(x_min, x_max, 100)
+# x2 = np.linspace(y_min, y_max, 100)
+
+# # 計算y
+# y = x1 + x2 + 1
+
+# # 繪製線性方程式圖形
+# plt.plot(x1, y - x1, '-r', label='X2 = -X1 - 1')
+# plt.xlabel('X1')
+# plt.ylabel('X2')
+# plt.legend(loc='upper left')
+# plt.grid()
+# plt.show()
+
+# # 建立一個網格
+# x1, x2 = np.meshgrid(np.arange(1, 5, 0.1), np.arange(1, 5, 0.1))
+
+# # 計算y
+# y = x1 + x2 + 1
+
+# # 繪製3D圖形
+# fig = plt.figure()
+# ax = fig.gca(projection='3d')
+# ax.plot_surface(x1, x2, y, cmap='coolwarm')
+# ax.set_xlabel('X1')
+# ax.set_ylabel('X2')
+# ax.set_zlabel('Y')
+# plt.show()
+
+# # x = np.linspace(-1, 1, 50)     # 建立一個把 -1 到 1 切分成 50 等分的矩陣
+# # y = -0.15X1  -0.285  0.6 
+
+# # 2 * x + 3    # 設定 y 軸的值
+# # plt.title("Matplotlib first test")    # 圖形的標題
+# # plt.xlabel("x axis name")    # X 軸的名稱 
+# # plt.ylabel("y axis name")    # Y 軸的名稱
+# # plt.plot(x, y)    # 畫出 x 和 y 的關係
+# # plt.show()    # 顯示圖片
+
+
+# x_vector = np.linspace(0,x[0])
+# x_vector
+# y_vector = np.linspace(x[1],0)
+# y_vector
+# plt.plot(x_vector, y_vector,'b')
+

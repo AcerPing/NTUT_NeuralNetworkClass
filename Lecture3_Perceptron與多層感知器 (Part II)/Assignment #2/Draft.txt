@@ -1,0 +1,75 @@
+[array([
+[ 1.39352382,  0.77113683, -1.55047679, -1.11851945,  1.25331615],
+[ 0.86124212,  0.97380585,  1.4166278 , -0.04827578,  1.67380178]
+]), 
+
+
+
+array([
+[-0.28605784,  0.46128792,  0.46887176],
+[-1.07411078,  1.57582916, -0.81546296],
+[ 6.52738159, -1.31200926, -4.12634245],
+[-1.13393567,  0.56150398, -0.55441573],
+[-0.45591531,  0.67280404, -1.04256703]
+])]
+
+特徵選取、切分資料、評估模型
+
+
+'''
+# 三個類別的資料
+x1 = [1.00000000e+00, 2.71256747e-07, 2.69122252e-06]
+y1 = [9.99998785e-01, 5.40235100e-01, 3.93567105e-06]
+z1 = [1.00000000e+00, 6.26819029e-09, 3.76109455e-08]
+
+x2 = [1.00000000e+00, 2.71256747e-07, 2.69122252e-06]
+y2 = [9.99998785e-01, 5.40235100e-01, 3.93567105e-06]
+z2 = [1.00000000e+00, 6.26819029e-09, 3.76109455e-08]
+
+x3 = [1.00000000e+00, 2.71256747e-07, 2.69122252e-06]
+y3 = [9.99998785e-01, 5.40235100e-01, 3.93567105e-06]
+z3 = [1.00000000e+00, 6.26819029e-09, 3.76109455e-08]
+
+# 設定圖形大小
+fig = plt.figure(figsize=(8, 8))
+
+# 繪製三個類別的散佈圖
+ax = fig.add_subplot(111, projection='3d')
+ax.scatter(x1, y1, z1, c='r', marker='o', label='Class 1')
+ax.scatter(x2, y2, z2, c='b', marker='^', label='Class 2')
+ax.scatter(x3, y3, z3, c='g', marker='s', label='Class 3')
+
+# 設定座標軸標籤
+# 設定座標軸標籤
+ax.set_xlabel('X Label', fontsize=12)
+ax.set_ylabel('Y Label', fontsize=12)
+ax.set_zlabel('Z Label', fontsize=12)
+
+# 設定圖例
+ax.legend()
+
+# 顯示圖形
+plt.show()
+'''
+
+# import numpy as np
+# import matplotlib.pyplot as plt
+# from mpl_toolkits.mplot3d import Axes3D
+
+# fig = plt.figure()
+# ax = fig.add_subplot(projection='3d')
+
+# for _input in Output_Predict:
+#   x = _input[0]
+#   y = _input[1]
+#   z = _input[2]
+#   # 绘制散点图
+#   ax.scatter(x, y, z, c='r', marker='o')
+
+# # 设置坐标轴标签
+# ax.set_xlabel('X Label')
+# ax.set_ylabel('Y Label')
+# ax.set_zlabel('Z Label')
+
+# # 显示图形
+# plt.show()

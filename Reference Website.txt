@@ -1,0 +1,8 @@
+1.) 機器學習基石(上)
+https://www.coursera.org/learn/ntumlone-mathematicalfoundations/home/week/1
+
+2.)【機器學習基石筆記】 
+https://hackmd.io/@CynthiaChuang/Machine-Learning-Foundations-Study-Notes-Contents/%2F%40CynthiaChuang%2FMachine-Learning-Foundations-Study-Notes-Contents
+
+3.) *70* 欒老師暑期課程***第17.3集❤️Perceptron Learning Algorithm (PLA)😊一些機器學習演算法介紹
+https://www.youtube.com/watch?v=gioKR9GO0MQ
